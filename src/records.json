@@ -1,0 +1,99 @@
+{
+    "hero_section": {
+      "headline": "Hi, I'm Akshit Thakur – A Passionate Computer Science Student!",
+      "subheading": "I love coding, problem-solving, and building innovative digital solutions. Always exploring new technologies to create impactful experiences.",
+      "cta_buttons": [
+        { "text": "📂 Download Resume", "link": "#" },
+        { "text": "🚀 View My Projects", "link": "#" },
+        { "text": "📩 Contact Me", "link": "#" }
+      ]
+    },
+    "about_me_section": {
+      "about_me": "I'm Akshit Thakur, a dedicated Computer Science student with a passion for software development and emerging technologies. I enjoy solving complex problems, building efficient solutions, and continuously learning to stay ahead in the tech world.",
+      "what_i_do": [
+        "💻 Software Development – Writing clean, efficient, and scalable code.",
+        "🧠 Problem-Solving – Passionate about algorithms, data structures, and logic-building.",
+        "🚀 Tech Enthusiast – Always exploring new technologies and frameworks."
+      ]
+    },
+    "skills_expertise": {
+    "headline": "What I am Expert In",
+    "subheadline": "My Services",
+    "cards": [
+  {
+    "title": "Web Development",
+    "description": "Expert in WordPress, Plugin & Theme Development, HTML, CSS, and JavaScript.",
+    "icon": "web-development"
+  },
+  {
+    "title": "Programming Languages",
+    "description": "Proficient in C, C++, Python, and Java.",
+    "icon": "programming"
+  },
+  {
+    "title": "Frontend Frameworks",
+    "description": "Skilled in building user interfaces using React.",
+    "icon": "frontend"
+  },
+  {
+    "title": "Back-End Development",
+    "description": "Experienced in Node.js, Express, and PHP for server-side applications.",
+    "icon": "backend"
+  },
+  {
+    "title": "Databases",
+    "description": "Knowledge of MySQL, PostgreSQL, and MongoDB for efficient data management.",
+    "icon": "database"
+  },
+  {
+    "title": "App Development",
+    "description": "Building modern and responsive applications using React Native.",
+    "icon": "app-development"
+  }
+]
+    },
+    "hobbies": [
+      {
+        "number": 1,
+        "icon": "🎨",
+        "title": "Art & Creativity",
+        "description": "I express my creativity through sketching, painting, and drawing. Whether it’s capturing ideas with simple lines, blending colors on a canvas, or creating intricate designs, art allows me to bring imagination to life."
+      },
+      {
+        "number": 2,
+        "icon": "🥋",
+        "title": "Combat Sports",
+        "description": "I have a strong passion for Taekwondo, Boxing, and Kung Fu. These sports challenge me both physically and mentally, improving my agility, strength, and discipline. Martial arts and boxing teach me perseverance, self-defense, and control."
+      },
+      {
+        "number": 3,
+        "icon": "🌍",
+        "title": "Traveling",
+        "description": "Exploring new places and cultures gives me inspiration, broadens my perspective, and fuels my creativity. Every journey is a chance to learn something new."
+      }
+    ],
+
+    
+    "contact": [
+    {
+      "icon": "location",
+      "title": "Address",
+      "details": "Itwari ward sagar (M.P)"
+    },
+    {
+      "icon": "email",
+      "title": "Email Us",
+      "details": [
+        "akshitthakur371@gmail.com"
+      ]
+    },
+    {
+      "icon": "phone",
+      "title": "Call Now",
+      "details": [
+        "+91 9691111098"
+      ]
+    }
+  ]
+  }
+  

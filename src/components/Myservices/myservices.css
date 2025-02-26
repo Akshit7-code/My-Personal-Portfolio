@@ -1,0 +1,111 @@
+.maincontainer{
+    background-color: #202020;
+}
+.parentscard{
+    background-color: #222222;
+    padding: 50px 40px;
+    position: relative;
+}
+.carddesign{
+    border: 1px solid #666666;
+    width: 100px;
+    height: 100px;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px; */
+    border-radius: 50%;
+    position: relative;
+    transform-origin: center;
+}
+.dot1{
+ width: 14px;
+ height: 14px;
+ background-color: #666666;
+ border-radius: 50%;
+ position: absolute;
+ top: 0;
+ left: 17px;
+}
+.dot2{
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    background-color: #666666;
+    border-radius: 50%;
+    bottom: 0;
+    right: 17px;
+
+}
+.parentscard:hover .carddesign {
+    animation: spin 1s linear infinite;
+}
+.parentscard:hover .dot1,
+.parentscard:hover .dot2{
+    background-color: #21E786;
+}
+
+.parentscard:hover .carddesign {
+    border-color: #21E786;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Keep the icon static by applying reverse rotation */
+.parentscard:hover .icon-class {
+    transform: rotate(0deg); /* Reset initial rotation */
+    animation: counter-spin 1s linear infinite; /* Apply reverse rotation */
+}
+
+@keyframes counter-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg); /* Rotate opposite direction */
+    }
+}
+
+.parentscard::before,
+.parentscard::after {
+    content: "";
+    position: absolute;
+    width: 100px; /* Corner length */
+    height: 100px;
+    border: 1px solid transparent; /* Initially invisible */
+    transition: border-color 0.3s ease-in-out;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.parentscard::before {
+    top: 0;
+    left: 0;
+    border-top-color: transparent;
+    border-left-color: transparent;
+}
+
+.parentscard::after {
+    bottom: 0;
+    right: 0;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+}
+
+/* Show corners on hover */
+.parentscard:hover::before {
+    border-top-color: #21E786;
+    border-left-color: #21E786;
+}
+.parentscard:hover::after {
+    border-bottom-color: #21E786;
+    border-right-color: #21E786;
+}
