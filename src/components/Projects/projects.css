@@ -1,0 +1,23 @@
+.projectcard{
+    position: relative;
+}
+
+.buttonview{
+    position: absolute;
+    background-color: #22915B;
+    padding: 5px 20px;
+    border-radius: 20px;
+    color: white;
+    right: 15px;
+    top: 42%;
+    opacity: 0;
+    transition: 0.5s;
+}
+.buttonview:hover{
+    background-color: #127545;
+}
+
+.projectcard:hover .buttonview{
+    opacity: 1;
+
+}

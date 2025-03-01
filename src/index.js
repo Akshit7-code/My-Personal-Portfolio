@@ -4,7 +4,9 @@ import App from './components/Home/App.js';
 import About from './components/About/About.js';
 import Myservices from './components/Myservices/Myservices.js';
 import Contact from './components/Contact/Contact.js';
+import Projects from './components/Projects/Projects.js';
 import "./index.css";
+import Education from './components/Education/Education.js';
 
 
 
@@ -14,6 +16,8 @@ root.render(
     <App />
     <About />
     <Myservices />
+    <Education />
+    <Projects />
     <Contact />
   </React.StrictMode>
 );
