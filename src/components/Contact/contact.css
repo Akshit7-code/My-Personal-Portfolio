@@ -1,9 +1,15 @@
 .maincontact{
-    background-color: #2A2A2A;
+    background-color: #0F1117;
+    position: relative;
 }
 
+.cards{
+    transition: all 0.3s ease-in-out;
+}
+.cards:hover{
+    transform: scale(1.03);
+}
 .cardscontact{
-    background-color: #202020;
     padding: 40px 20px;
 }
 .iconcontact{
@@ -33,4 +39,21 @@
 
 .formcontainer{
     padding: 50px 40px;
+}
+
+.social-icon{
+    opacity: 0.5;
+}
+
+.social-icon:hover{
+    opacity: 0.9;
+}
+
+.mapdiv{
+    margin-top: -150px;
+}
+
+.formdata{
+    position: relative;
+    z-index: 100;
 }

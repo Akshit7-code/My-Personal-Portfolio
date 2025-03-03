@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './projects.css';
+import { useScrollTrigger } from "../useScrollTrigger";
+import { motion } from "framer-motion";
 // Sample data for blog posts
 const blogPosts = [
     {
@@ -7,7 +9,7 @@ const blogPosts = [
         title: "5 UI/UX Trends to Watch in 2024",
         description: "Stay ahead of the curve with these emerging trends in UI/UX design.",
         category: "App Design",
-        image: "html-css-collage-concept.jpg", // Replace with your image URL
+        image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1031&q=80",
         time: "Europe 15:10",
     },
     {
@@ -15,7 +17,7 @@ const blogPosts = [
         title: "The Importance of User Research",
         description: "Stay ahead of the curve with these emerging trends in UI/UX design.",
         category: "Mobility",
-        image: "man-works-with-sound-laptop-early-morning.jpg", // Replace with your image URL
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80",
         time: "Europe 16:11",
     },
     {
@@ -23,7 +25,7 @@ const blogPosts = [
         title: "The Role of Color Psychology",
         description: "Stay ahead of the curve with these emerging trends in UI/UX design.",
         category: "Mobility",
-        image: "online-web-design.jpg", // Replace with your image URL
+        image: "https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
         time: "Europe 17:12",
     },
     {
@@ -31,7 +33,7 @@ const blogPosts = [
         title: "The Future of Responsive Design",
         description: "Stay ahead of the curve with these emerging trends in UI/UX design.",
         category: "Web Design",
-        image: "programming-background-with-person-working-with-codes-computer (1).jpg", // Replace with your image URL
+        image: "https://images.unsplash.com/photo-1581276879432-15e50529f34b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
         time: "Europe 18:13",
     },
     {
@@ -39,7 +41,7 @@ const blogPosts = [
         title: "The Impact of AI on Design",
         description: "Stay ahead of the curve with these emerging trends in UI/UX design.",
         category: "AI",
-        image: "programming-background-with-person-working-with-codes-computer.jpg", // Replace with your image URL
+        image: "https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
         time: "Europe 19:14",
     },
     {
@@ -47,53 +49,80 @@ const blogPosts = [
         title: "The Rise of Minimalism",
         description: "Stay ahead of the curve with these emerging trends in UI/UX design.",
         category: "Design Trends",
-        image: "html-css-collage-concept.jpg", // Replace with your image URL
+        image: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1031&q=80",
         time: "Europe 20:15",
     },
 ];
 
 function Projects() {
+    const [hoveredCard, setHoveredCard] = useState(null);
+
+    const handleMouseEnter = (cardId) => {
+        setHoveredCard(cardId);
+    };
+
+    const handleMouseLeave = () => {
+        setHoveredCard(null);
+    };
+    const [ref, inView] = useScrollTrigger(0.3);
+
     return (
-        <section className="py-16" style={{ backgroundColor: '#202020' }}>
-            <div className="container mx-auto px-6 lg:px-12"> {/* Added padding on left and right */}
+        <section className="projects-container py-20 px-4">
+            <div className="container mx-auto">
                 {/* Heading */}
-                <div className="text-center mb-12">
-                    <h1 className="text-4xl font-bold text-white">Recent Blog</h1>
-                    <p className="text-gray-400 mt-2">
-                        Explore the insights and trends shaping our industry
-                    </p>
-                </div>
+                <motion.div className="text-center text-white mb-20"
+                ref={ref}
+                initial={{ opacity: 0, x: 0 }}
+                animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 0 }} // Resets when out of view
+                transition={{ duration: 1.2 }}>
+                    <p className="text-gray-400 text-lg mb-2">MY PORTFOLIO</p>
+                    <h1 className="text-4xl font-bold relative inline-block">
+                        RECENT BLOG
+                        <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-[#3E77F3] via-[#6861F0] to-[#8C3AEB] rounded-full"></span>
+                    </h1>
+                </motion.div>
 
                 {/* Blog Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 px-36">
-                    {blogPosts.map((post) => (
-                        <div
-                        key={post.id}
-                        className="bg-[#111111] overflow-hidden shadow-md projectcard"
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    {blogPosts.map((post, index) => (
+                        <motion.div
+                            key={post.id}
+                            className={`project-card ${hoveredCard === post.id ? 'hovered' : ''}`}
+                            onMouseEnter={() => handleMouseEnter(post.id)}
+                            onMouseLeave={handleMouseLeave}
+                            initial={{ opacity: 0, y: 0 }}  // Starts from below
+                            whileInView={{ opacity: 1, y: 0 }}  // Comes to normal position
+                            exit={{ opacity: 0, y: 0 }}  // Moves back down when exiting
+                            transition={{ duration: 0.6, delay: index * 0.2 }}
+                            viewport={{ once: false, amount: 0.2 }}
                         >
-                            <button className='buttonview'>View</button>
-                            {/* Image */}
-                            <img
-                                src={post.image}
-                                alt={post.title}
-                                className="w-full h-56 object-cover"
-                            />
-
-                            {/* Content */}
-                            <div className="p-6">
-                                <span className="text-sm text-blue-400 font-semibold">
-                                    {post.category}
-                                </span>
-                                <h2 className="text-xl font-bold text-white mt-2">{post.title}</h2>
-                                <p className="text-gray-400 mt-2">{post.description}</p>
-                                <div className="flex items-center mt-4">
-                                    <span className="text-sm text-gray-500">{post.time}</span>
+                            {/* Image Section */}
+                            <div className="project-image-container">
+                                <img
+                                    src={post.image}
+                                    alt={post.title}
+                                    className="project-image"
+                                />
+                                <div className="image-overlay">
+                                    <span className="category-badge">{post.category}</span>
+                                    <button className="view-button">
+                                        View Project
+                                    </button>
                                 </div>
                             </div>
-                        </div>
+
+                            {/* Content Section */}
+                            <div className="project-content">
+                                <div className="time-badge">
+                                    <span>{post.time}</span>
+                                </div>
+                                <h2 className="project-title">{post.title}</h2>
+                                <p className="project-description">{post.description}</p>
+                            </div>
+                            <div className="card-glow"></div>
+                        </motion.div>
                     ))}
                 </div>
-
             </div>
         </section>
     );

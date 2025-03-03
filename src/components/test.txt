@@ -1,0 +1,18 @@
+Here’s a well-balanced color template for your website using the colors you provided:
+
+### 🎨 **Website Color Template**
+- **Primary Color (Background/Main Accent):** `#6B46C1` (Tailwind: `bg-purple-600`)
+- **Secondary Background (Dark Theme Base):** `#202020`
+- **Card/Container Background:** `#2A2A2A`
+- **Text (Headings & Primary Text):** `#FFFFFF` (White for contrast)
+- **Secondary Text (Muted):** `#B0B0B0` (Soft Gray for readability)
+- **CTA Buttons (Accent Color):** `#8B5CF6` (Light Purple for a vibrant call-to-action)
+
+### **Design Usage**
+- Use **`bg-purple-600`** for key highlights like buttons or important sections.
+- Use **`#202020`** as the main background to create a dark mode aesthetic.
+- Use **`#2A2A2A`** for cards or section dividers to add depth.
+- White (`#FFFFFF`) for clear contrast in text.
+- Light purple (`#8B5CF6`) for hover effects or interactive elements.
+
+Would you like a sample UI mockup with this color scheme? 🚀
