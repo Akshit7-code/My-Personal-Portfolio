@@ -58,7 +58,7 @@ function Contact() {
                                 ) : (
                                     <p className="text-gray-400 mt-2">{contact.details}</p>
                                 )}
-                            </motion.div>
+                            </motion.div> 
                         ))}
                     </div>
                     <motion.div className="max-w-full mx-auto text-center mt-20 formdata"
