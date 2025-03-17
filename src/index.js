@@ -13,12 +13,14 @@ import Education from './components/Education/Education.js';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
-    <About />
-    <Myservices />
-    <Education />
-    <Projects />
-    <Contact />
+    <div className="main-container">
+      <App />
+      <About />
+      <Myservices />
+      <Education />
+      <Projects />
+      <Contact />
+    </div>
   </React.StrictMode>
 );
 

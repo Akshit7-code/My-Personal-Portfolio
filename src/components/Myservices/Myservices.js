@@ -15,17 +15,23 @@ const iconMap = {
 function Myservices() {
     const [ref, inView] = useScrollTrigger(0.3);
     return (
-        <section className="maincontainer py-20 px-4">
+        <section id='services' className="maincontainer py-20 px-4">
             <motion.div className="text-center text-white mb-12"
-                ref={ref}
-                initial={{ opacity: 0, x: 0 }}
-                animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 0 }} // Resets when out of view
-                transition={{ duration: 1.2 }}>
-                <p className="text-gray-400 text-lg mb-2">{Records.skills_expertise.headline}</p>
-                <h1 className="text-4xl font-bold relative inline-block">
+                 initial={{ opacity: 0, y: 50 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 exit={{ opacity: 0, y: 50 }} // ✅ Reverse animation when scrolling back up
+                 transition={{ duration: 0.6 }}
+                 viewport={{ once: false, amount: 0.05 }}>
+                {/* <p className="text-gray-400 text-lg mb-2">{Records.skills_expertise.headline}</p> */}
+                <p className="text-gray-400 text-base md:text-lg mb-2">{Records.skills_expertise.headline}</p>
+                {/* <h1 className="text-4xl font-bold relative inline-block">
                     {Records.skills_expertise.subheadline}
                     <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-[#3E77F3] via-[#6861F0] to-[#8C3AEB] rounded-full"></span>
-                </h1>
+                </h1> */}
+                <h1 className="text-2xl md:text-4xl font-bold relative inline-block">
+                {Records.skills_expertise.subheadline}
+          <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-16 md:w-24 h-1 bg-gradient-to-r from-[#3E77F3] via-[#6861F0] to-[#8C3AEB] rounded-full"></span>
+        </h1>
             </motion.div>
 
             <div

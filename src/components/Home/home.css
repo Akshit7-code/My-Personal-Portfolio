@@ -71,3 +71,34 @@
     }
   }
   
+
+@media screen and (max-width: 768px) {
+    /* .container11 {
+        flex-direction: column;
+        padding: 0px 10px;
+    }
+    .navbar{
+        padding: 10px 20px;
+    }
+    .fiveyear{
+        right: 0px;
+    }
+    .reactbox{
+        top: -10%;
+    }
+    .typescriptbox{
+        left: 0%;
+    }
+    .tailwindbox{
+        top: 0;
+    }
+    .nodebox{
+        top: 0;
+    }
+    .updownclass{
+        animation: updown 3s infinite;
+    } */
+    .imagerightcon{
+        display: none;
+    }
+}

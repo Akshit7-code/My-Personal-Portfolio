@@ -17,7 +17,7 @@ function Contact() {
     const [ref, inView] = useScrollTrigger(0.3);
     return (
         <>
-            <section className="pt-16 px-6 maincontact">
+            <section id='contact' className="pt-16 px-4 maincontact">
                 <div className="max-w-6xl mx-auto">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                         {Records.contact.map((contact, index) => (
@@ -69,7 +69,7 @@ function Contact() {
                         <h2 className="font-700 text-white">Contact</h2>
                         <h3 className="text-3xl font-bold text-white mb-4">Have Any Question?</h3>
 
-                        <form className="rounded-2xl shadow-2xl p-8 mt-10 border border-gray-700" style={{
+                        <form className="form rounded-2xl shadow-2xl mt-10 border border-gray-700" style={{
                             background: "rgba(30, 30, 40, 1)",
                             backdropFilter: "blur(10px)",
                         }}>

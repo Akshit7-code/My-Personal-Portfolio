@@ -1,68 +1,26 @@
 import React, { useEffect, useState } from 'react';
 import { Briefcase, Award, ArrowRight, Github, Linkedin, Twitter, Code, X, Menu, Download } from 'lucide-react';
 import './home.css';
+import Navbar from '../Navbar/Navbar';
 function App() {
   const [isVisible, setIsVisible] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(true);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
   return (
-    <div className="maincontainerhero relative bg-gradient-to-br from-[#0F1117] via-[#0C0E13] to-[#08090D] text-white overflow-hidden">
+    <div id='home' className="maincontainerhero relative bg-gradient-to-br from-[#0F1117] via-[#0C0E13] to-[#08090D] text-white overflow-hidden">
     {/* Enhanced Smooth Blur Effect */}
     <div className="absolute -bottom-10 left-0 w-full h-16 bg-gradient-to-t from-[#0F1117] via-[#0F1117]/20 to-transparent blur-[20px]"></div>
  
 
       {/* Navigation */}
-      <nav className="navbar">
-        <div className="flex items-center space-x-2">
-          <Code size={28} className="text-indigo-500" />
-          <span className="text-2xl font-bold">Alex<span className="text-indigo-500">Dev</span></span>
-        </div>
-
-        {/* Mobile menu button */}
-        <button
-          className="md:hidden text-white focus:outline-none"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8">
-          <a href="#" className="hover:text-indigo-400 transition-colors duration-300 border-b-2 border-indigo-500">Home</a>
-          <a href="#" className="hover:text-indigo-400 transition-colors duration-300">About</a>
-          <a href="#" className="hover:text-indigo-400 transition-colors duration-300">Services</a>
-          <a href="#" className="hover:text-indigo-400 transition-colors duration-300">Portfolio</a>
-          <a href="#" className="hover:text-indigo-400 transition-colors duration-300">Blog</a>
-          <a href="#" className="hover:text-indigo-400 transition-colors duration-300">Contact</a>
-        </div>
-
-
-
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-slate-800 shadow-lg rounded-b-lg p-4 md:hidden z-50 animate-fade-in">
-            <div className="flex flex-col space-y-4">
-              <a href="#" className="hover:text-indigo-400 transition-colors duration-300 border-l-2 border-indigo-500 pl-2">Home</a>
-              <a href="#" className="hover:text-indigo-400 transition-colors duration-300 pl-2">About</a>
-              <a href="#" className="hover:text-indigo-400 transition-colors duration-300 pl-2">Services</a>
-              <a href="#" className="hover:text-indigo-400 transition-colors duration-300 pl-2">Portfolio</a>
-              <a href="#" className="hover:text-indigo-400 transition-colors duration-300 pl-2">Blog</a>
-              <a href="#" className="hover:text-indigo-400 transition-colors duration-300 pl-2">Contact</a>
-              <button className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-6 py-2 rounded-full flex items-center justify-center space-x-2 transition-all duration-300">
-                <span>Resume</span>
-                <Download size={16} />
-              </button>
-            </div>
-          </div>
-        )}
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
-      <div className="container container11">
+      <div className="container container11 mt-6">
         {/* Left Content */}
         <div className={`md:w-1/2 z-10 mainrightdiv transition-all duration-1000 transform ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}`}>
           <div className="relative ">

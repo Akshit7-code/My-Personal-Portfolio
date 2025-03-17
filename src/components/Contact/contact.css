@@ -55,5 +55,15 @@
 
 .formdata{
     position: relative;
-    z-index: 100;
+    z-index: 40;
+}
+
+.form{
+    padding: 30px 25px;
+}
+@media screen and (max-width: 768px){
+    .form{
+        padding: 25px 15px;
+    }
+    
 }

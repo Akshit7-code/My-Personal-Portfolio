@@ -20,7 +20,7 @@ function Education() {
   const [ref, inView] = useScrollTrigger(0.3);
 
   return (
-    <div className="education-container educationmainncontainer py-10 md:py-20 px-2 md:px-4 min-h-screen text-white font-sans">
+    <div id='Education' className="education-container educationmainncontainer py-10 md:py-20 px-2 md:px-4 min-h-screen text-white font-sans">
       <motion.div 
         className="text-center text-white mb-10 md:mb-20"
         ref={ref}

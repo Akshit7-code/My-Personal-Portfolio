@@ -171,3 +171,10 @@ body {
   color: transparent;
   background-image: linear-gradient(to right, #10b981, #3b82f6);
 }
+
+
+.main-container {
+  overflow: hidden;
+  width: 100%;
+  background-color: black;
+}
