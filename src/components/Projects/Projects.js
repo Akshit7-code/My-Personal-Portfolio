@@ -70,7 +70,7 @@ function Projects() {
         <section id='Projects' className="projects-container py-20 px-4">
             <div className="container mx-auto">
                 {/* Heading */}
-                <motion.div className="text-center text-white mb-20"
+                <motion.div className="text-center text-white heading"
                 ref={ref}
                 initial={{ opacity: 0, x: 0 }}
                 animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 0 }} // Resets when out of view

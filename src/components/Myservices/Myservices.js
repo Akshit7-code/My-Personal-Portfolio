@@ -16,12 +16,12 @@ function Myservices() {
     const [ref, inView] = useScrollTrigger(0.3);
     return (
         <section id='services' className="maincontainer py-20 px-4">
-            <motion.div className="text-center text-white mb-12"
-                 initial={{ opacity: 0, y: 50 }}
-                 whileInView={{ opacity: 1, y: 0 }}
-                 exit={{ opacity: 0, y: 50 }} // ✅ Reverse animation when scrolling back up
-                 transition={{ duration: 0.6 }}
-                 viewport={{ once: false, amount: 0.05 }}>
+            <motion.div className="text-center text-white headding"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 50 }} // ✅ Reverse animation when scrolling back up
+                transition={{ duration: 0.6 }}
+                viewport={{ once: false, amount: 0.05 }}>
                 {/* <p className="text-gray-400 text-lg mb-2">{Records.skills_expertise.headline}</p> */}
                 <p className="text-gray-400 text-base md:text-lg mb-2">{Records.skills_expertise.headline}</p>
                 {/* <h1 className="text-4xl font-bold relative inline-block">
@@ -29,9 +29,9 @@ function Myservices() {
                     <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-[#3E77F3] via-[#6861F0] to-[#8C3AEB] rounded-full"></span>
                 </h1> */}
                 <h1 className="text-2xl md:text-4xl font-bold relative inline-block">
-                {Records.skills_expertise.subheadline}
-          <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-16 md:w-24 h-1 bg-gradient-to-r from-[#3E77F3] via-[#6861F0] to-[#8C3AEB] rounded-full"></span>
-        </h1>
+                    {Records.skills_expertise.subheadline}
+                    <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-16 md:w-24 h-1 bg-gradient-to-r from-[#3E77F3] via-[#6861F0] to-[#8C3AEB] rounded-full"></span>
+                </h1>
             </motion.div>
 
             <div
@@ -40,12 +40,16 @@ function Myservices() {
             >
                 {Records.skills_expertise.cards.map((card, index) => (
                     <motion.div
-                        key={index}
-                        className="service-card rounded-xl p-6 bg-gradient-to-br from-gray-800/80 to-gray-900/90 backdrop-blur-sm border border-gray-700/50 hover:border-[#6861F0]/50 transition-all duration-300 transform hover:-translate-y-2"
-                        initial={{ opacity: 0, y: 0 }}
-                        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 0 }}
-                        transition={{ duration: 0.6, delay: index * 0.2 }} // Staggered delay
-                    >
+                    key={index}
+                    className="service-card rounded-xl p-6 bg-gradient-to-br from-gray-800/80 to-gray-900/90 backdrop-blur-sm border border-gray-700/50 hover:border-[#6861F0]/50 transition-all duration-300 transform hover:-translate-y-2"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 50 }}
+                    transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}
+                    viewport={{ once: false, amount: 0.01 }} // ✅ Triggers as soon as 1% of the section is visible
+                >
+                
+
                         <div className="flex justify-center mb-6">
                             <div className="card-icon-wrapper">
                                 <div className="icon-container">

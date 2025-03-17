@@ -16,7 +16,9 @@
     filter: blur(30px);
     z-index: 10;
   }
-  
+  .heading{
+    margin-bottom: 60px;
+  }
   .projects-container::after {
     content: '';
     position: absolute;
@@ -186,6 +188,9 @@
     
     .project-image-container {
       height: 200px;
+    }
+    .heading{
+      margin-bottom: 50px;
     }
   }
   
