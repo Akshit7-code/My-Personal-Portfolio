@@ -14,11 +14,11 @@ function About() {
 
 
     return (
-        <div id='about' className="aboutmaincontainer min-h-screen text-white py-20 px-4 md:px-8 lg:px-16">
+        <div id='about' className="aboutmaincontainer min-h-screen text-white pt-14 pb-8 px-4 md:px-8 lg:px-16">
             <div className="absolute -top-10 left-0 w-full h-20 bg-gradient-to-t from-[#0B0D13] via-[#0B0D13]/80 to-transparent blur-[20px]"></div>
             <div className="thirdcontainer max-w-7xl mx-auto">
                 {/* Header with animated gradient text */}
-                <motion.div className="text-center text-white mb-20"
+                <motion.div className="text-center text-white mb-16"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 50 }} // ✅ Reverse animation when scrolling back up
@@ -33,10 +33,10 @@ function About() {
                 </motion.div>
 
                 {/* Main content with image and text */}
-                <div className="imagecontainer flex flex-col lg:flex-row items-center gap-12 mb-20">
+                <div className="imagecontainer flex flex-col lg:flex-row items-center gap-12 mb-14">
                     {/* Image Box with enhanced effects */}
                     <motion.div
-                        className="imagebox animate-section lg:w-2/4 relative group"
+                        className="imagebox animate-section relative group"
                         initial={{ opacity: 0, x: -100 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -100 }} // ✅ Reverses when scrolling back up
@@ -65,38 +65,40 @@ function About() {
                                 }}>
                                 <div className=" font-bold text-4xl bg-clip-text text-transparent"
                                     style={{ backgroundImage: "linear-gradient(90deg, #3E77F3, #8C3AEB, #6861F0)" }}>
-                                    10+
+                                    Fresher
                                 </div>
-                                <div className="text-gray-300 text-sm">Years Experience</div>
+                                <div className="text-gray-300 text-sm"></div>
                             </div>
                         </div>
                     </motion.div>
 
                     {/* Content Box with enhanced typography and spacing */}
-                    <motion.div className="animation-section lg:w-3/5 space-y-8 ml-3"
+                     <motion.div className="animation-section space-y-8 ml-3 sm:ml-0"
                         ref={ref}
                         initial={{ opacity: 0, x: 100 }}
                         animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }} // Resets when out of view
                         transition={{ duration: 1 }}>
                         <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-                            Professional And <span className="bg-clip-text text-transparent"
+                        Passionate Developer <span className="bg-clip-text text-transparent"
                                 style={{ backgroundImage: "linear-gradient(90deg, #3E77F3, #8C3AEB, #6861F0)" }}>
-                                Dedicated
+                                & Creative
                             </span> <br />
-                            Creative Designer
+                             Thinker
                         </h2>
 
 
 
                         <p className="text-gray-300 text-lg leading-relaxed">
-                            Check out 10 Best Design's updates for the top web design & development
-                            companies for your needs by reviewing our list & development companies!
-                            Find the best web design.
+                        I am a Full-Stack Developer with expertise in frontend, backend, 
+                        and mobile app development. I specialize in WordPress development, 
+                        including custom plugins and themes, and work with various programming 
+                        languages to build scalable web and mobile solutions.
                         </p>
 
                         <p className="text-gray-300 text-lg leading-relaxed">
-                            Custom Web Solution. 24x7 Customer Support. Secure Payment Gateway.
-                            Get A Free Web Quote.
+                        With a passion for creative design and efficient development, 
+                        I deliver user-friendly and high-performance applications. 
+                        Let’s create something amazing together! 
                         </p>
 
 
@@ -110,7 +112,7 @@ function About() {
                                 background: "linear-gradient(90deg, #3E77F3, #8C3AEB, #6861F0)",
                                 boxShadow: "0 8px 20px rgba(108, 99, 255, 0.3)"
                             }}>
-                            MORE ABOUT
+                            Download CV
                             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </button>
                     </motion.div>

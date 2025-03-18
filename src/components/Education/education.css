@@ -233,6 +233,9 @@
     .timeline-period2{
       display: none;
     }
+    .timeline-period{
+      display: none;
+    }
   }
   
   @media (max-width: 480px) {

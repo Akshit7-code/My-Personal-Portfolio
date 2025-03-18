@@ -18,6 +18,27 @@
   filter: blur(30px);
   z-index: 10;
 }
+.animation-section {
+  width: 50%;
+  margin-left: 12px; /* Same as Tailwind's ml-3 */
+}
+
+@media (max-width: 768px) { /* Adjust for small screens */
+  .animation-section {
+      width: 100%;
+      margin-left: 0;
+  }
+}
+.imagebox {
+  width: 50%;
+  position: relative;
+}
+
+@media (max-width: 768px) { /* For small screens */
+  .imagebox {
+      width: 100%;
+  }
+}
 
 
 @media screen and (max-width: 768px) {

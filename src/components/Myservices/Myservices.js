@@ -42,9 +42,9 @@ function Myservices() {
                     <motion.div
                     key={index}
                     className="service-card rounded-xl p-6 bg-gradient-to-br from-gray-800/80 to-gray-900/90 backdrop-blur-sm border border-gray-700/50 hover:border-[#6861F0]/50 transition-all duration-300 transform hover:-translate-y-2"
-                    initial={{ opacity: 0, y: 50 }}
+                    initial={{ opacity: 0, y: 0 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 50 }}
+                    exit={{ opacity: 0, y: 0 }}
                     transition={{ duration: 0.6, ease: "easeOut", delay: index * 0.2 }}
                     viewport={{ once: false, amount: 0.01 }} // ✅ Triggers as soon as 1% of the section is visible
                 >

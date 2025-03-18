@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './education.css';
 import { useScrollTrigger } from "../useScrollTrigger";
 import { motion } from "framer-motion";
+import Records from "../../records.json";
 
 function Education() {
   const [hoveredDiv, setHoveredDiv] = useState(null);
@@ -21,7 +22,7 @@ function Education() {
 
   return (
     <div id='Education' className="education-container py-20 educationmainncontainer px-2 md:px-4 min-h-screen text-white font-sans">
-      <motion.div 
+      <motion.div
         className="text-center text-white mb-10 md:mb-20"
         ref={ref}
         initial={{ opacity: 0, y: 70 }}
@@ -73,15 +74,15 @@ function Education() {
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: false, amount: 0.2 }}
-            onMouseEnter={() => handleMouseEnter(1)} 
+            onMouseEnter={() => handleMouseEnter(1)}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="timeline-period text-sm md:text-base">2015 - 2018</div>
+            <div className="timeline-period text-sm md:text-base">{Records.education[0].duration}</div>
             <div className={`timeline-card ${hoveredDiv === 1 ? 'hovered' : ''}`}>
-              <h3 className="timeline-title text-lg md:text-xl">Web Developer</h3>
-              <p className="timeline-subtitle text-sm md:text-base">Open: 16Messages</p>
+              <h3 className="timeline-title text-lg md:text-xl">{Records.education[0].title}</h3>
+              <p className="timeline-subtitle text-sm md:text-base">{Records.education[0].institution}</p>
               <p className="timeline-content text-sm md:text-base">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Oma lorem ipsum vel machete fucollore. Donec sedere et unus cuore quam dolor sit amet.
+                {Records.education[0].description}
               </p>
               <div className="card-glow"></div>
             </div>
@@ -95,18 +96,18 @@ function Education() {
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: false, amount: 0.2 }}
-            onMouseEnter={() => handleMouseEnter(2)} 
+            onMouseEnter={() => handleMouseEnter(2)}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="timeline-period2 text-sm md:text-base">2017 - 2019</div>
-            <div className={`timeline-card ${hoveredDiv === 2 ? 'hovered' : ''}`}>
-              <h3 className="timeline-title text-lg md:text-xl">Graphic Designer</h3>
-              <p className="timeline-subtitle text-sm md:text-base">Educationle - Home</p>
+            <div className="timeline-period2 text-sm md:text-base">{Records.education[2].duration}</div>
+            <div className={`timeline-card ${hoveredDiv === 3 ? 'hovered' : ''}`}>
+              <h3 className="timeline-title text-lg md:text-xl">{Records.education[2].title}</h3>
+              <p className="timeline-subtitle text-sm md:text-base">{Records.education[2].institution}</p>
               <p className="timeline-content text-sm md:text-base">
-                I nascetur adhurge fixe eforto magnitudin viscipull tempor ut non-dimentum nec veniam dici. Oma nostra natura puritatibus est magna da pariaturat incertum, trascatur ridiculata muta. Donec quam felix.
-              </p>
+              {Records.education[2].description}              </p>
               <div className="card-glow"></div>
             </div>
+
           </motion.div>
 
           {/* Timeline Item 3 */}
@@ -117,16 +118,15 @@ function Education() {
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             viewport={{ once: false, amount: 0.2 }}
-            onMouseEnter={() => handleMouseEnter(3)} 
+            onMouseEnter={() => handleMouseEnter(3)}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="timeline-period text-sm md:text-base">2019 - 2022</div>
-            <div className={`timeline-card ${hoveredDiv === 3 ? 'hovered' : ''}`}>
-              <h3 className="timeline-title text-lg md:text-xl">Web Developer</h3>
-              <p className="timeline-subtitle text-sm md:text-base">Open: 16Messages</p>
+            <div className="timeline-period text-sm md:text-base">{Records.education[1].duration}</div>
+            <div className={`timeline-card ${hoveredDiv === 2 ? 'hovered' : ''}`}>
+              <h3 className="timeline-title text-lg md:text-xl">{Records.education[1].title}</h3>
+              <p className="timeline-subtitle text-sm md:text-base">{Records.education[1].institution}</p>
               <p className="timeline-content text-sm md:text-base">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Oma lorem ipsum vel machete fucollore. Donec sedere et unus cuore quam dolor sit amet.
-              </p>
+                {Records.education[1].description}              </p>
               <div className="card-glow"></div>
             </div>
           </motion.div>

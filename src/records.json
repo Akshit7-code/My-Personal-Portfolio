@@ -1,82 +1,118 @@
 {
-    "hero_section": {
-      "headline": "Hi, I'm Akshit Thakur – A Passionate Computer Science Student!",
-      "subheading": "I love coding, problem-solving, and building innovative digital solutions. Always exploring new technologies to create impactful experiences.",
-      "cta_buttons": [
-        { "text": "📂 Download Resume", "link": "#" },
-        { "text": "🚀 View My Projects", "link": "#" },
-        { "text": "📩 Contact Me", "link": "#" }
-      ]
-    },
-    "about_me_section": {
-      "headline": "About Me",
-      "subheading": "Get to know me better",
-      "about_me": "I'm Akshit Thakur, a dedicated Computer Science student with a passion for software development and emerging technologies. I enjoy solving complex problems, building efficient solutions, and continuously learning to stay ahead in the tech world.",
-      "what_i_do": [
-        "💻 Software Development – Writing clean, efficient, and scalable code.",
-        "🧠 Problem-Solving – Passionate about algorithms, data structures, and logic-building.",
-        "🚀 Tech Enthusiast – Always exploring new technologies and frameworks."
-      ]
-    },
-    "skills_expertise": {
+  "hero_section": {
+    "headline": "Hi, I'm Akshit Thakur – A Passionate Computer Science Student!",
+    "subheading": "I love coding, problem-solving, and building innovative digital solutions. Always exploring new technologies to create impactful experiences.",
+    "cta_buttons": [
+      {
+        "text": "📂 Download Resume",
+        "link": "#"
+      },
+      {
+        "text": "🚀 View My Projects",
+        "link": "#"
+      },
+      {
+        "text": "📩 Contact Me",
+        "link": "#"
+      }
+    ]
+  },
+  "about_me_section": {
+    "headline": "About Me",
+    "subheading": "Get to know me better",
+    "about_me": "I'm Akshit Thakur, a dedicated Computer Science student with a passion for software development and emerging technologies. I enjoy solving complex problems, building efficient solutions, and continuously learning to stay ahead in the tech world.",
+    "what_i_do": [
+      "💻 Software Development – Writing clean, efficient, and scalable code.",
+      "🧠 Problem-Solving – Passionate about algorithms, data structures, and logic-building.",
+      "🚀 Tech Enthusiast – Always exploring new technologies and frameworks."
+    ]
+  },
+  "skills_expertise": {
     "headline": "What I am Expert In",
     "subheadline": "My Services",
     "cards": [
+      {
+        "title": "Web Development",
+        "description": "Expert in WordPress, Plugin & Theme Development, HTML, CSS, and JavaScript.",
+        "icon": "web-development"
+      },
+      {
+        "title": "Programming Languages",
+        "description": "Proficient in C, C++, Python, and Java.",
+        "icon": "programming"
+      },
+      {
+        "title": "Frontend Frameworks",
+        "description": "Skilled in building user interfaces using React.",
+        "icon": "frontend"
+      },
+      {
+        "title": "Back-End Development",
+        "description": "Experienced in Node.js, Express, and PHP for server-side applications.",
+        "icon": "backend"
+      },
+      {
+        "title": "Databases",
+        "description": "Knowledge of MySQL, PostgreSQL, and MongoDB for efficient data management.",
+        "icon": "database"
+      },
+      {
+        "title": "App Development",
+        "description": "Building modern and responsive applications using React Native.",
+        "icon": "app-development"
+      }
+    ]
+  },
+  "hobbies": [
+    {
+      "number": 1,
+      "icon": "🎨",
+      "title": "Art & Creativity",
+      "description": "I express my creativity through sketching, painting, and drawing. Whether it’s capturing ideas with simple lines, blending colors on a canvas, or creating intricate designs, art allows me to bring imagination to life."
+    },
+    {
+      "number": 2,
+      "icon": "🥋",
+      "title": "Combat Sports",
+      "description": "I have a strong passion for Taekwondo, Boxing, and Kung Fu. These sports challenge me both physically and mentally, improving my agility, strength, and discipline. Martial arts and boxing teach me perseverance, self-defense, and control."
+    },
+    {
+      "number": 3,
+      "icon": "🌍",
+      "title": "Traveling",
+      "description": "Exploring new places and cultures gives me inspiration, broadens my perspective, and fuels my creativity. Every journey is a chance to learn something new."
+    }
+  ],
+
+  "education": [
   {
-    "title": "Web Development",
-    "description": "Expert in WordPress, Plugin & Theme Development, HTML, CSS, and JavaScript.",
-    "icon": "web-development"
+    "number": 1,
+    "icon": "🏫",
+    "title": "High School",
+    "institution": "Deepak Memorial Academy, Sagar (M.P.)",
+    "duration": "2020 – 2022",
+    "description": "Completed high school with a strong academic background in Science and Mathematics. Developed problem-solving skills through academic projects and actively participated in extracurricular activities, fostering a keen interest in technology and innovation."
   },
   {
-    "title": "Programming Languages",
-    "description": "Proficient in C, C++, Python, and Java.",
-    "icon": "programming"
+    "number": 2,
+    "icon": "🎓",
+    "title": "College",
+    "institution": "Gyan Sagar College of Engineering, Sagar",
+    "duration": "2022 – Present",
+    "degree": "Bachelor of Technology (B.Tech) in Computer Science",
+    "description": "Currently pursuing a B.Tech in Computer Science. Acquiring expertise in programming, software development, and emerging technologies. Engaged in coding competitions, hackathons, and tech-related events to enhance practical knowledge and industry exposure."
   },
   {
-    "title": "Frontend Frameworks",
-    "description": "Skilled in building user interfaces using React.",
-    "icon": "frontend"
-  },
-  {
-    "title": "Back-End Development",
-    "description": "Experienced in Node.js, Express, and PHP for server-side applications.",
-    "icon": "backend"
-  },
-  {
-    "title": "Databases",
-    "description": "Knowledge of MySQL, PostgreSQL, and MongoDB for efficient data management.",
-    "icon": "database"
-  },
-  {
-    "title": "App Development",
-    "description": "Building modern and responsive applications using React Native.",
-    "icon": "app-development"
+    "number": 3,
+    "icon": "💻",
+    "title": "Web Development Internship",
+    "institution": "MadQuick Pvt. Ltd.",
+    "duration": "5 Months",
+    "description": "Completed a 5-month internship at MadQuick Pvt. Ltd., gaining hands-on experience in frontend and backend web development. Worked on real-world projects, enhancing skills in HTML, CSS, JavaScript, and modern frameworks. Collaborated with a team to develop responsive and interactive web applications."
   }
 ]
-    },
-    "hobbies": [
-      {
-        "number": 1,
-        "icon": "🎨",
-        "title": "Art & Creativity",
-        "description": "I express my creativity through sketching, painting, and drawing. Whether it’s capturing ideas with simple lines, blending colors on a canvas, or creating intricate designs, art allows me to bring imagination to life."
-      },
-      {
-        "number": 2,
-        "icon": "🥋",
-        "title": "Combat Sports",
-        "description": "I have a strong passion for Taekwondo, Boxing, and Kung Fu. These sports challenge me both physically and mentally, improving my agility, strength, and discipline. Martial arts and boxing teach me perseverance, self-defense, and control."
-      },
-      {
-        "number": 3,
-        "icon": "🌍",
-        "title": "Traveling",
-        "description": "Exploring new places and cultures gives me inspiration, broadens my perspective, and fuels my creativity. Every journey is a chance to learn something new."
-      }
-    ],
-
-    
-    "contact": [
+,
+  "contact": [
     {
       "icon": "location",
       "title": "Address",
@@ -97,5 +133,4 @@
       ]
     }
   ]
-  }
-  
+}
