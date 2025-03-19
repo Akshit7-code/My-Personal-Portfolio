@@ -29,11 +29,11 @@ function Education() {
         animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 1 }}
       >
-        <p className="text-gray-400 text-base md:text-lg mb-2">MY JOURNEY</p>
-        <h1 className="text-2xl md:text-4xl font-bold relative inline-block">
-          WORK PARTICIPATION
-          <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-16 md:w-24 h-1 bg-gradient-to-r from-[#3E77F3] via-[#6861F0] to-[#8C3AEB] rounded-full"></span>
-        </h1>
+        <p className="text-gray-400 text-base md:text-lg mb-2">GROWTH & LEARNING</p>
+<h1 className="text-2xl md:text-4xl font-bold relative inline-block">
+    MILESTONES OF KNOWLEDGE
+    <span className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-16 md:w-24 h-1 bg-gradient-to-r from-[#3E77F3] via-[#6861F0] to-[#8C3AEB] rounded-full"></span>
+</h1>
       </motion.div>
 
       <div className="max-w-6xl mx-auto relative px-4 md:px-6">

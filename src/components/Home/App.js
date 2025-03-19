@@ -50,13 +50,13 @@ function App() {
             </div>
 
             <div className="flex items-center space-x-6">
-              <a href="#" className="text-gray-400 hover:text-indigo-400 transition-all duration-300 transform hover:scale-110">
+              <a href="https://github.com/Akshit7-code" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-indigo-400 transition-all duration-300 transform hover:scale-110">
                 <Github size={24} className="hover:animate-spin-slow" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-indigo-400 transition-all duration-300 transform hover:scale-110">
+              <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-indigo-400 transition-all duration-300 transform hover:scale-110">
                 <Linkedin size={24} className="hover:animate-spin-slow" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-indigo-400 transition-all duration-300 transform hover:scale-110">
+              <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-indigo-400 transition-all duration-300 transform hover:scale-110">
                 <Twitter size={24} className="hover:animate-spin-slow" />
               </a>
             </div>

@@ -28,8 +28,8 @@
     ]
   },
   "skills_expertise": {
-    "headline": "What I am Expert In",
-    "subheadline": "My Services",
+    "headline": "Skills That Define Me",
+    "subheadline": "Services Tailored for You",
     "cards": [
       {
         "title": "Web Development",
@@ -63,55 +63,33 @@
       }
     ]
   },
-  "hobbies": [
+  "education": [
     {
       "number": 1,
-      "icon": "🎨",
-      "title": "Art & Creativity",
-      "description": "I express my creativity through sketching, painting, and drawing. Whether it’s capturing ideas with simple lines, blending colors on a canvas, or creating intricate designs, art allows me to bring imagination to life."
+      "icon": "🏫",
+      "title": "High School",
+      "institution": "Deepak Memorial Academy, Sagar (M.P.)",
+      "duration": "2020 – 2022",
+      "description": "Completed high school with a strong academic background in Science and Mathematics. Developed problem-solving skills through academic projects and actively participated in extracurricular activities, fostering a keen interest in technology and innovation."
     },
     {
       "number": 2,
-      "icon": "🥋",
-      "title": "Combat Sports",
-      "description": "I have a strong passion for Taekwondo, Boxing, and Kung Fu. These sports challenge me both physically and mentally, improving my agility, strength, and discipline. Martial arts and boxing teach me perseverance, self-defense, and control."
+      "icon": "🎓",
+      "title": "College",
+      "institution": "Gyan Sagar College of Engineering, Sagar",
+      "duration": "2022 – Present",
+      "degree": "Bachelor of Technology (B.Tech) in Computer Science",
+      "description": "Currently pursuing a B.Tech in Computer Science. Acquiring expertise in programming, software development, and emerging technologies. Engaged in coding competitions, hackathons, and tech-related events to enhance practical knowledge and industry exposure."
     },
     {
       "number": 3,
-      "icon": "🌍",
-      "title": "Traveling",
-      "description": "Exploring new places and cultures gives me inspiration, broadens my perspective, and fuels my creativity. Every journey is a chance to learn something new."
+      "icon": "💻",
+      "title": "Web Development Internship",
+      "institution": "MadQuick Pvt. Ltd.",
+      "duration": "5 Months",
+      "description": "Completed a 5-month internship at MadQuick Pvt. Ltd., gaining hands-on experience in frontend and backend web development. Worked on real-world projects, enhancing skills in HTML, CSS, JavaScript, and modern frameworks. Collaborated with a team to develop responsive and interactive web applications."
     }
   ],
-
-  "education": [
-  {
-    "number": 1,
-    "icon": "🏫",
-    "title": "High School",
-    "institution": "Deepak Memorial Academy, Sagar (M.P.)",
-    "duration": "2020 – 2022",
-    "description": "Completed high school with a strong academic background in Science and Mathematics. Developed problem-solving skills through academic projects and actively participated in extracurricular activities, fostering a keen interest in technology and innovation."
-  },
-  {
-    "number": 2,
-    "icon": "🎓",
-    "title": "College",
-    "institution": "Gyan Sagar College of Engineering, Sagar",
-    "duration": "2022 – Present",
-    "degree": "Bachelor of Technology (B.Tech) in Computer Science",
-    "description": "Currently pursuing a B.Tech in Computer Science. Acquiring expertise in programming, software development, and emerging technologies. Engaged in coding competitions, hackathons, and tech-related events to enhance practical knowledge and industry exposure."
-  },
-  {
-    "number": 3,
-    "icon": "💻",
-    "title": "Web Development Internship",
-    "institution": "MadQuick Pvt. Ltd.",
-    "duration": "5 Months",
-    "description": "Completed a 5-month internship at MadQuick Pvt. Ltd., gaining hands-on experience in frontend and backend web development. Worked on real-world projects, enhancing skills in HTML, CSS, JavaScript, and modern frameworks. Collaborated with a team to develop responsive and interactive web applications."
-  }
-]
-,
   "contact": [
     {
       "icon": "location",
@@ -131,6 +109,56 @@
       "details": [
         "+91 9691111098"
       ]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "QR Code Generator",
+      "description": "Create QR Codes Instantly",
+      "category": "Tools",
+      "image": "qrcode.jpg",
+      "time": "Global 10:00"
+    },
+    {
+      "id": 2,
+      "title": "Image Search Engine - Infinite Gaze",
+      "description": "Find Similar Images with Ease",
+      "category": "AI & Machine Learning",
+      "image": "searchengine.jpg",
+      "time": "Global 11:00"
+    },
+    {
+      "id": 3,
+      "title": "EMI Calculator",
+      "description": "Plan Your Finances Smartly",
+      "category": "Finance",
+      "image": "calculator.jpg",
+      "time": "Global 12:00"
+    },
+    {
+      "id": 4,
+      "title": "Portfolio Template",
+      "description": "Showcase Your Work in Style",
+      "category": "Web Development",
+      "image": "portfoliotemplate.jpg",
+      "time": "Global 13:00"
+    },
+    {
+      "id": 5,
+      "title": "HTML, CSS, and JS Code Editor",
+      "description": "Write and Test Code in Real-Time",
+      "category": "Web Development",
+      "image": "codeditor.avif",
+      "time": "Global 15:00"
+    },
+    {
+      "id": 6,
+      "title": "Accessible Mate",
+      "description": "Find Accessible Places Easily",
+      "category": "Accessibility",
+      "image": "accessiblemate.jpg",
+      "time": "Global 14:00"
     }
   ]
 }
