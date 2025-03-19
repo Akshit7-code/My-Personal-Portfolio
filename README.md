@@ -1,6 +1,4 @@
-Here's a well-structured and engaging README file for your React-based personal portfolio:  
 
----
 
 # 🚀 My Personal Portfolio  
 
