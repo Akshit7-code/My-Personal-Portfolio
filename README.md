@@ -14,13 +14,10 @@ Welcome to my personal portfolio! 🎨 Built with **React**, this project showca
 - **React** – For building the UI  
 - **CSS/Tailwind** – For styling  
 - **Framer Motion** – For animations (if used)  
-- **GitHub Pages/Vercel** – For deployment  
+- **GitHub Pages/render** – For deployment  
 
 ## 🎯 Live Demo  
 Check it out here 👉 https://portfolio-jsbt.onrender.com
-
-## 📸 Preview  
-![Portfolio Screenshot](your-screenshot-url)  
 
 ## 🚀 Installation & Setup  
 Want to run it locally? Follow these steps:  
