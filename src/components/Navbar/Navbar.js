@@ -56,7 +56,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-2">
           <Code size={28} className="text-indigo-500" />
           <span className="text-2xl font-bold">
-            Alex<span className="text-indigo-500">Dev</span>
+          Folio<span className="text-indigo-500">Box</span>
           </span>
         </div>
 

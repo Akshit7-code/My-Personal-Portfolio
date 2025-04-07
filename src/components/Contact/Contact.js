@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './contact.css';
 import { FaMapMarkerAlt, FaEnvelope, FaPhone } from "react-icons/fa";
 import Records from "../../records.json";
 import GoogleMapComponent from "../googlemap";
-import { FaFacebook, FaTwitter, FaInstagram, FaPinterest, FaSkype, FaLinkedin, FaHeart } from "react-icons/fa";
+// import { FaFacebook, FaTwitter, FaInstagram, FaPinterest, FaSkype, FaLinkedin, FaHeart } from "react-icons/fa";
+import { Github, Linkedin, Twitter } from 'lucide-react';
 import { useScrollTrigger } from "../useScrollTrigger";
 import { motion } from "framer-motion";
+import emailjs from '@emailjs/browser';
+import { useRef } from 'react';
+
+
 // Icon map
 const iconMap = {
     location: <FaMapMarkerAlt className="icons text-5xl text-gray-300" />,
@@ -15,6 +20,26 @@ const iconMap = {
 
 function Contact() {
     const [ref, inView] = useScrollTrigger(0.3);
+
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_k998isf', 'template_ehca4x1', form.current, {
+                publicKey: 'p7H4TZxJ3FG6eS6b5',
+            })
+            .then(
+                () => {
+                    alert('Message send successfully!');
+                    form.current.reset(); // Reset the form after successful submission
+                },
+                (error) => {
+                    alert('FAILED...', error.text);
+                },
+            );
+    };
+
     return (
         <>
             <section id='contact' className="pt-16 px-4 maincontact">
@@ -58,18 +83,18 @@ function Contact() {
                                 ) : (
                                     <p className="text-gray-400 mt-2">{contact.details}</p>
                                 )}
-                            </motion.div> 
+                            </motion.div>
                         ))}
                     </div>
                     <motion.div className="max-w-full mx-auto text-center mt-20 formdata"
-                     ref={ref}
-                     initial={{ opacity: 0, y: 80 }}
-                     animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 80 }} // Reverts when out of view
-                     transition={{ duration: 0.8 }}>
+                        ref={ref}
+                        initial={{ opacity: 0, y: 80 }}
+                        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 80 }} // Reverts when out of view
+                        transition={{ duration: 0.8 }}>
                         <h2 className="font-700 text-white">Contact</h2>
                         <h3 className="text-3xl font-bold text-white mb-4">Have Any Question?</h3>
 
-                        <form className="form rounded-2xl shadow-2xl mt-10 border border-gray-700" style={{
+                        <form ref={form} onSubmit={sendEmail} className="form rounded-2xl shadow-2xl mt-10 border border-gray-700" style={{
                             background: "rgba(30, 30, 40, 1)",
                             backdropFilter: "blur(10px)",
                         }}>
@@ -78,6 +103,8 @@ function Contact() {
                                     <input
                                         type="text"
                                         placeholder="Name"
+                                        name='name'
+                                        required
                                         className="w-full px-6 py-4 bg-gray-700 text-white rounded-full focus:outline-none focus:ring-1 focus:ring-purple-500 transition-all border border-gray-600"
                                     />
                                 </div>
@@ -85,6 +112,7 @@ function Contact() {
                                     <input
                                         type="text"
                                         placeholder="Lastname"
+                                        name='lastname'
                                         className="w-full px-6 py-4 bg-gray-700 text-white rounded-full focus:outline-none focus:ring-1 focus:ring-purple-500 transition-all border border-gray-600"
                                     />
                                 </div>
@@ -95,6 +123,8 @@ function Contact() {
                                     <input
                                         type="email"
                                         placeholder="Email"
+                                        name='email'
+                                        required
                                         className="w-full px-6 py-4 bg-gray-700 text-white rounded-full focus:outline-none focus:ring-1 focus:ring-purple-500 transition-all border border-gray-600"
                                     />
                                 </div>
@@ -102,6 +132,7 @@ function Contact() {
                                     <input
                                         type="text"
                                         placeholder="Subject"
+                                        name='subject'
                                         className="w-full px-6 py-4 bg-gray-700 text-white rounded-full focus:outline-none focus:ring-1 focus:ring-purple-500 transition-all border border-gray-600"
                                     />
                                 </div>
@@ -111,13 +142,15 @@ function Contact() {
                                 <textarea
                                     placeholder="Message"
                                     rows={4}
+                                    name='message'
+                                    required
                                     className="w-full px-6 py-4 bg-gray-700 text-white rounded-2xl focus:outline-none focus:ring-1 focus:ring-purple-500 transition-all border border-gray-600"
                                 ></textarea>
                             </div>
 
                             <div className=" mt-8 flex justify-center">
                                 <button
-                                    type="submit"
+                                    type="submit" value="Send"
                                     className=" text-cyan-50 px-10 py-4 rounded-full font-semibold transition-all transform hover:scale-105"
                                     style={{
                                         background: "linear-gradient(90deg, #3E77F3, #8C3AEB, #6861F0)",
@@ -139,21 +172,31 @@ function Contact() {
                         <img src="logo.png" alt="Logo" style={{ width: "150px" }} /> {/* Adjust the logo size */}
                     </div>
                     <div style={{ display: "flex", justifyContent: "center", gap: "20px", marginBottom: "20px", paddingTop: "0px" }}>
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={{ color: "#fff", transition: "opacity 0.3s" }} className="social-icon">
+                        {/* <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" style={{ color: "#fff", transition: "opacity 0.3s" }} className="social-icon">
                             <FaFacebook className="text-2xl" />
-                        </a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style={{ color: "#fff", transition: "opacity 0.3s" }} className="social-icon">
+                        </a> */}
+                        {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" style={{ color: "#fff", transition: "opacity 0.3s" }} className="social-icon">
                             <FaTwitter className="text-2xl" />
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style={{ color: "#fff", transition: "opacity 0.3s" }} className="social-icon">
+                        </a> */}
+                        {/* <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" style={{ color: "#fff", transition: "opacity 0.3s" }} className="social-icon">
                             <FaLinkedin className="text-2xl" />
+                        </a> */}
+
+                        <a href="https://github.com/Akshit7-code" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-indigo-400 transition-all duration-300 transform hover:scale-110">
+                            <Github size={24} className="hover:animate-spin-slow" />
                         </a>
-                        <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" style={{ color: "#fff", transition: "opacity 0.3s" }} className="social-icon">
+                        <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-indigo-400 transition-all duration-300 transform hover:scale-110">
+                            <Linkedin size={24} className="hover:animate-spin-slow" />
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-indigo-400 transition-all duration-300 transform hover:scale-110">
+                            <Twitter size={24} className="hover:animate-spin-slow" />
+                        </a>
+                        {/* <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" style={{ color: "#fff", transition: "opacity 0.3s" }} className="social-icon">
                             <FaPinterest className="text-2xl" />
-                        </a>
-                        <a href="https://skype.com" target="_blank" rel="noopener noreferrer" style={{ color: "#fff", transition: "opacity 0.3s" }} className="social-icon">
+                        </a> */}
+                        {/* <a href="https://skype.com" target="_blank" rel="noopener noreferrer" style={{ color: "#fff", transition: "opacity 0.3s" }} className="social-icon">
                             <FaSkype className="text-2xl" />
-                        </a>
+                        </a> */}
                     </div>
 
                     {/* Copyright Text */}
