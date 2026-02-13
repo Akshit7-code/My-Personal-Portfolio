@@ -70,7 +70,7 @@ function App() {
     <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-indigo-500 mx-auto relative z-10 shadow-xl shadow-indigo-500/20 animate-float">
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 z-10 animate-gradient"></div>
       <img
-        src="my1.png"
+        src="myportfolioimg.png"
         alt="Profile"
         className="w-full h-full object-cover"
       />
