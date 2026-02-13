@@ -52,7 +52,7 @@ function About() {
                         </div>
                         <div className="relative rounded-2xl">
                             <img
-                                src="my2.png"
+                                src="myportfolioimg.png"
                                 // src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
                                 alt="Profile"
                                 className="w-full object-cover h-[450px] rounded-2xl shadow-2xl border-2 border-opacity-20 transition-transform duration-700 "
